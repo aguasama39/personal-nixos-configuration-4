@@ -9,26 +9,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
 
-    qtengine = {
-      url = "github:kossLAN/qtengine";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    darkly = {
-      url = "github:Bali10050/Darkly";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
