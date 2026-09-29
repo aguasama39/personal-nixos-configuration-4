@@ -39,9 +39,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
 
   # Use SDDM as the login manager for the Hyprland session.
   services.displayManager.sddm.enable = true;
