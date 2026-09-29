@@ -15,7 +15,6 @@
       ./modules/nvidia.nix
       ./modules/packages.nix
       ./modules/system.nix
-      ./modules/caelestia.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -40,11 +39,9 @@
   i18n.defaultLocale = "en_CA.UTF-8";
 
 
-  # Use SDDM in Wayland mode for the Hyprland session.
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
+  # KDE Plasma 6 desktop with SDDM.
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
