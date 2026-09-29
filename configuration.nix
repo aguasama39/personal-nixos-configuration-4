@@ -40,8 +40,11 @@
   i18n.defaultLocale = "en_CA.UTF-8";
 
 
-  # Use SDDM as the login manager for the Hyprland session.
-  services.displayManager.sddm.enable = true;
+  # Use SDDM in Wayland mode for the Hyprland session.
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
