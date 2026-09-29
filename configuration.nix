@@ -6,7 +6,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ # This file is generated locally on each install and is intentionally not tracked.
       ./hardware-configuration.nix
       ./modules/bluetooth.nix
       ./modules/drives.nix
