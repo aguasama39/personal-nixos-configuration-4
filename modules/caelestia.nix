@@ -4,7 +4,7 @@ let
   system = pkgs.stdenv.hostPlatform.system;
 in
 {
-  # Hyprland is added alongside Plasma so SDDM can still be used as a fallback.
+  # Enable Hyprland for the Caelestia session.
   programs.hyprland.enable = true;
 
   xdg.portal = {
