@@ -5,6 +5,7 @@
     git
     wget
     curl
+    chromium
     fastfetch
     pciutils
     nano
