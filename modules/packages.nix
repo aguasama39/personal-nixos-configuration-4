@@ -19,7 +19,6 @@
     mpd
     mpc
     pavucontrol
-    fladder
   ];
 
 }
