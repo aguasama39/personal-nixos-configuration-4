@@ -12,7 +12,6 @@
       ./modules/drives.nix
       ./modules/fish.nix
       ./modules/flatpak.nix
-      ./modules/gaming.nix
       ./modules/nvidia.nix
       ./modules/packages.nix
       ./modules/system.nix
