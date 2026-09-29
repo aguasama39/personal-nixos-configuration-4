@@ -1,11 +1,21 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
-let
-  system = pkgs.stdenv.hostPlatform.system;
-in
 {
-  # Enable Hyprland for the Caelestia session.
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  # SDDM automatically starts the Hyprland session.
+  services.displayManager = {
+    sddm.enable = true;
+    defaultSession = "hyprland";
+
+    autoLogin = {
+      enable = true;
+      user = "paulcho";
+    };
+  };
 
   xdg.portal = {
     enable = true;
@@ -14,17 +24,13 @@ in
     ];
   };
 
-  environment.systemPackages = [
-    inputs.qtengine.packages.${system}.default
-    inputs.darkly.packages.${system}.default
-    pkgs.papirus-icon-theme
-
-    # Caelestia CLI helpers.
-    pkgs.grim
-    pkgs.slurp
-    pkgs.swappy
-    pkgs.wl-clipboard
-    pkgs.cliphist
-    pkgs.fuzzel
+  environment.systemPackages = with pkgs; [
+    papirus-icon-theme
+    grim
+    slurp
+    swappy
+    wl-clipboard
+    cliphist
+    fuzzel
   ];
 }
