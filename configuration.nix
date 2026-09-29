@@ -39,10 +39,6 @@
   i18n.defaultLocale = "en_CA.UTF-8";
 
 
-  # KDE Plasma 6 desktop with SDDM.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
