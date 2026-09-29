@@ -15,23 +15,6 @@
         clockFormat = "12h";
       };
 
-      background = {
-        enabled = true;
-        wallpaperEnabled = true;
-        desktopClock = {
-          enabled = true;
-          scale = 1.35;
-          position = "top-right";
-          invertColors = false;
-          background.enabled = false;
-          shadow = {
-            enabled = true;
-            opacity = 0.7;
-            blur = 0.4;
-          };
-        };
-      };
-
       appearance.transparency = {
         enabled = true;
         base = 0.82;
