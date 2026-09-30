@@ -6,8 +6,11 @@
 
     settings = {
       font_family = "IosevkaTerm Nerd Font Mono";
-      font_size = 12;
+      font_size = 11;
       confirm_os_window_close = 0;
+
+      background_opacity = "0.6";
+      dynamic_background_opacity = "yes";
 
       foreground = "#cdcecf";
       background = "#192330";
