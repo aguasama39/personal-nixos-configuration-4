@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  fileSystems."/mnt/games" = {
-    device = "/dev/disk/by-uuid/6a1f1540-9754-4c90-a00a-33361b6c6abd";
+  fileSystems."/mnt/ssd" = {
+    device = "/dev/disk/by-uuid/6b9143e8-66c2-404a-9699-ce4025ee0704";
     fsType = "btrfs";
     options = [
       "defaults"
