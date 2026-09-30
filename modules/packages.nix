@@ -20,6 +20,7 @@
     mpd
     mpc
     pavucontrol
+    filelight
   ];
 
 }
