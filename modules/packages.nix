@@ -16,11 +16,8 @@
     proton-vpn-cli
     gearlever
     nicotine-plus
-    rmpc
-    mpd
-    mpc
     pavucontrol
-    filelight
+    kdePackages.filelight
   ];
 
 }
