@@ -1,4 +1,4 @@
-# # Edit this configuration file to define what should be installed on
+# Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/bluetooth.nix
       ./modules/drives.nix
       ./modules/fish.nix
       ./modules/flatpak.nix
@@ -21,7 +20,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  
+
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -37,7 +36,7 @@
   time.timeZone = "America/Edmonton";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_CA.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
