@@ -9,6 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -27,6 +31,7 @@
         modules = [
           ./configuration.nix
 
+          inputs.nur.modules.nixos.default
           home-manager.nixosModules.home-manager
 
           {
