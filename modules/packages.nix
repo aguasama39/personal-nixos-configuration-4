@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -6,7 +6,7 @@
     wget
     curl
 
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    pkgs-unstable.brave-origin
     
     fastfetch
     pciutils
@@ -14,7 +14,7 @@
     kitty
     ffmpeg
     cifs-utils
-    unrar
+    kdePackages.ark
     nicotine-plus
     pavucontrol
     kdePackages.filelight
