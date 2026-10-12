@@ -10,11 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
@@ -45,7 +40,7 @@
             home-manager.users.paulcho = import ./home.nix;
 
             home-manager.extraSpecialArgs = {
-              inherit inputs;
+              inherit inputs pkgs-unstable;
             };
           }
         ];
