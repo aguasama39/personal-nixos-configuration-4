@@ -8,18 +8,19 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/flatpak.nix
       ./modules/drives.nix
       ./modules/fish.nix
-      ./modules/flatpak.nix
+      ./modules/system.nix
       ./modules/nvidia.nix
       ./modules/packages.nix
-      ./modules/system.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Use latest kernel.
 
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -36,7 +37,7 @@
   time.timeZone = "America/Edmonton";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_CA.UTF-8";
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -105,7 +106,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-   services.openssh.enable = true;
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
