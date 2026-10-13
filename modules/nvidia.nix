@@ -19,5 +19,12 @@
     open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    powerManagement.enable = true;
+    powerManagement.finegrained = false;
   };
+
+  boot.kernelParams = [
+    "nvidia.NVreg_TemporaryFilePath=/var/tmp"
+  ];
 }
