@@ -5,9 +5,6 @@
     git
     wget
     curl
-
-    pkgs-unstable.brave-origin
-    
     fastfetch
     pciutils
     nano
@@ -18,6 +15,7 @@
     nicotine-plus
     pavucontrol
     kdePackages.filelight
+    pkgs-unstable.brave-origin
   ];
 
 }
