@@ -15,7 +15,7 @@
     nicotine-plus
     pavucontrol
     kdePackages.filelight
-    pkgs-unstable.brave-origin
+    brave
   ];
 
 }
