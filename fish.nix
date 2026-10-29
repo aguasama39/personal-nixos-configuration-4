@@ -16,6 +16,7 @@
       pkgconf = "sudo nano /etc/nixos/modules/packages.nix";
       flake = "sudo nano /etc/nixos/flake.nix";
       update = "cd /etc/nixos && sudo nix flake update && git add . && sudo nixos-rebuild switch --flake .#nixos";
+      nixpush = "git -C /etc/nixos add . && git -C /etc/nixos commit && git -C /etc/nixos push";
       home = "sudo nano /etc/nixos/home.nix";
     };
   };
