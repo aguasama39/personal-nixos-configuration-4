@@ -12,6 +12,7 @@
     ffmpeg
     cifs-utils
     kdePackages.ark
+    nicotine-plus
     pavucontrol
     kdePackages.filelight
     brave
