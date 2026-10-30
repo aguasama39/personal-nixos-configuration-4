@@ -16,6 +16,7 @@
     pavucontrol
     kdePackages.filelight
     brave
+    mpv
   ];
 
 }
